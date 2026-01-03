@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HMRS</title>
+
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="page">
+  <div class="card">
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button id="tabSignIn" class="active">Sign In</button>
+      <button id="tabSignUp">Sign Up</button>
+    </div>
+
+    <!-- SIGN IN -->
+    <form id="signInForm" class="form active">
+      <h2>Sign In</h2>
+
+      <div class="row single">
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="row single">
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <p class="error" id="signInError"></p>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- SIGN UP -->
+    <form id="signUpForm" class="form">
+      <h2>Sign Up</h2>
+
+      <div class="row">
+        <input type="text" placeholder="Employee ID" required>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="row">
+        <input type="password" placeholder="Password" required>
+        <select required>
+          <option value="">Select Role</option>
+          <option>Employee</option>
+          <option>HR</option>
+        </select>
+      </div>
+
+      <p class="info">
+        Password must be strong (8+ chars, uppercase, number, special)
+      </p>
+
+      <p class="error" id="signUpError"></p>
+      <p class="success" id="signUpSuccess"></p>
+
+      <button type="submit">Register</button>
+    </form>
+
+  </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

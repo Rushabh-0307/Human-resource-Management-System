@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Profile</title>
+
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<header class="header">
+  <h2>Employee Profile</h2>
+  <button class="back-btn" onclick="goBack()">← Back</button>
+</header>
+
+<div class="container">
+
+  <!-- PROFILE CARD -->
+  <div class="profile-card">
+
+    <div class="avatar">
+      <img id="profilePic" src="https://via.placeholder.com/120" alt="Profile">
+      <input type="file" id="picInput" hidden>
+      <button id="changePicBtn">Change Photo</button>
+    </div>
+
+    <div class="details">
+
+      <h3>Personal Details</h3>
+      <div class="grid">
+        <div><strong>Name:</strong> <span id="name"></span></div>
+        <div><strong>Email:</strong> <span id="email"></span></div>
+        <div><strong>Phone:</strong> <input id="phone"></div>
+        <div><strong>Address:</strong> <input id="address"></div>
+      </div>
+
+      <h3>Job Details</h3>
+      <div class="grid">
+        <div><strong>Employee ID:</strong> <span id="empId"></span></div>
+        <div><strong>Role:</strong> <span id="role"></span></div>
+        <div><strong>Department:</strong> <input id="department"></div>
+        <div><strong>Designation:</strong> <input id="designation"></div>
+      </div>
+
+      <h3>Salary Structure</h3>
+      <div class="grid">
+        <div><strong>Basic:</strong> <input id="basic"></div>
+        <div><strong>Allowance:</strong> <input id="allowance"></div>
+        <div><strong>Total:</strong> <span id="total"></span></div>
+      </div>
+
+      <h3>Documents</h3>
+      <ul class="docs">
+        <li>ID Proof.pdf</li>
+        <li>OfferLetter.pdf</li>
+      </ul>
+
+      <button class="save-btn" id="saveBtn">Save Changes</button>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>

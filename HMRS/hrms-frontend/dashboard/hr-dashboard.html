@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HR Dashboard</title>
+
+  <link rel="stylesheet" href="hr-dashboard.css">
+</head>
+<body>
+
+<header class="header">
+  <h2>HR Dashboard</h2>
+  <div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- EMPLOYEE SWITCH -->
+  <div class="employee-switch">
+  <label>Switch Employee</label>
+  <select id="employeeSelect">
+    <option>EMP001 - John Doe</option>
+  </select>
+</div>
+
+
+  <!-- QUICK ACTION CARDS -->
+  <div class="cards">
+    <div class="card clickable" onclick="scrollToSection('employees')">
+      Employee List
+    </div>
+    <div class="card clickable" onclick="scrollToSection('attendance')">
+      Attendance Records
+    </div>
+    <div class="card clickable" onclick="scrollToSection('leaves')">
+      Leave Approvals
+    </div>
+  </div>
+
+  <!-- EMPLOYEE LIST -->
+  <section id="employees" class="section">
+    <h3>Employee List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Emp ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTable"></tbody>
+    </table>
+  </section>
+
+  <!-- ATTENDANCE -->
+  <section id="attendance" class="section">
+    <h3>Attendance Records</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Check In</th>
+          <th>Check Out</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceTable"></tbody>
+    </table>
+  </section>
+
+  <!-- LEAVE APPROVAL -->
+  <section id="leaves" class="section">
+    <h3>Leave Approvals</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Type</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="leaveTable"></tbody>
+    </table>
+  </section>
+
+</div>
+
+<script src="hr-dashboard.js"></script>
+</body>
+</html>
