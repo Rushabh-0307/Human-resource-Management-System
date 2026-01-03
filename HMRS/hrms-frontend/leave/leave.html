@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leave Management</title>
+
+  <link rel="stylesheet" href="leave.css">
+</head>
+<body>
+
+<header class="header">
+  <h2 id="pageTitle">Leave Management</h2>
+  <button class="back-btn" onclick="goBack()">← Back</button>
+</header>
+
+<div class="container">
+
+  <!-- EMPLOYEE APPLY FORM -->
+  <section id="applySection" class="card hidden">
+    <h3>Apply for Leave</h3>
+
+    <form id="leaveForm">
+      <div class="row">
+        <label>Leave Type</label>
+        <select id="leaveType" required>
+          <option value="">Select</option>
+          <option>Paid</option>
+          <option>Sick</option>
+          <option>Unpaid</option>
+        </select>
+      </div>
+
+      <div class="row two">
+        <div>
+          <label>From</label>
+          <input type="date" id="fromDate" required>
+        </div>
+        <div>
+          <label>To</label>
+          <input type="date" id="toDate" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Remarks</label>
+        <textarea id="remarks" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="primary-btn">Submit Leave</button>
+    </form>
+  </section>
+
+  <!-- LEAVE LIST -->
+  <section class="card">
+    <h3>Leave Requests</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Type</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Status</th>
+            <th id="actionCol">Action</th>
+          </tr>
+        </thead>
+        <tbody id="leaveBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<script src="leave.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  background: white;
+  padding: 16px 22px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.clickable {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+/* BUTTONS */
+.action-btn {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.approve {
+  background: #4caf50;
+  color: white;
+}
+
+.reject {
+  background: #e53935;
+  color: white;
+}
+
+.employee-switch {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 16px 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.employee-switch label {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.employee-switch select {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Hover + focus */
+.employee-switch select:hover {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .employee-switch {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .employee-switch select {
+    width: 100%;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

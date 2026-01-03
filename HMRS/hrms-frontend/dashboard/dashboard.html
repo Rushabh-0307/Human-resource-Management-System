@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 id="dashboardTitle"></h1>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<!-- EMPLOYEE DASHBOARD -->
+<section id="employeeDashboard">
+
+  <div class="cards">
+    <a href="../profile/profile.html" class="card">Profile</a>
+    <a href="../attendance/attendance.html" class="card">Attendance</a>
+    <a href="../leave/leave.html" class="card">Leave Requests</a>
+    <a href="../payroll/payroll.html" class="card">Payroll</a>
+
+  </div>
+
+  <div class="activity">
+    <h3>Recent Activity</h3>
+    <ul>
+      <li>Attendance marked today</li>
+      <li>Leave request submitted</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- HR DASHBOARD -->
+<section id="hrDashboard" class="hidden">
+  <div class="switch">
+    <label>Switch Employee:</label>
+    <select id="employeeSelect"></select>
+  </div>
+
+  <div class="cards">
+    <div class="card">Employee List</div>
+    <div class="card">Attendance Records</div>
+    <div class="card">Leave Approvals</div>
+  </div>
+
+  <div class="activity">
+    <h3>HR Alerts</h3>
+    <ul>
+      <li>2 pending leave approvals</li>
+      <li>Attendance report generated</li>
+    </ul>
+  </div>
+</section>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
